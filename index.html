@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body {
+    margin: 10px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: #e0cc72;
+  
+ 
+   
+    }
+    nav {
+      background-color: #efefef;
+      color: rgb(0, 0, 0);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1.5rem;
+      position: relative;
+      background-image: url(data:image/jpeg;base64,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) ;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    /* Hide the checkbox */
+    #menu-toggle {
+      display: none;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    .nav-links a {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      font-size: 1rem;
+      
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color:rgb(248, 194, 44);
+        display: none;
+        
+      }
+
+      .nav-links li {
+        margin: 15px 0;
+        text-align: center;
+        background-color: #e68729;
+      }
+
+      /* When checkbox is checked, show the menu */
+      #menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+</style>
+<body>
+    <header>
+        <div>
+           <div style="background-color: #f0d14a; border-radius: 5px; padding: 20px; position: relative; text-align: center;">
+  
+  <h1 style="
+    color: #e6e5e4;
+    font-size: 6vw;  /* Responsive font size */
+    text-align: center;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    background-color: #e18f24;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(177, 116, 116, 0.1);
+  ">
+    Ramakrishna Mission Ashram, Rajgir
+  </h1>
+
+  <img
+    src="https://i0.wp.com/rkmvc.ac.in/wp-content/uploads/2019/02/logo.png?resize=300%2C300&ssl=1"
+    alt="logo"
+    style="
+      display: block;
+      margin: auto;
+      width: 40%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(177, 116, 116, 0.1);
+      border: 2px solid #f8a20f;
+      margin-bottom: 18px;
+    "
+  >
+
+</div>
+
+            <nav>
+    <img src=""alt="">
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">☰</label>
+   
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#pilgrimage">Pilgrimage</a></li>
+      <li><a href="#Our Inspiration">Our Inspiration</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#Event">Event</a></li>
+      <li><a href="#Contact">Contact</a></li>
+    </ul>
+  </nav>
+            </div>
+        </div>
+    </header>
+     <section class="hero">
+   <div class="hero-content" style="display: block; background-color: rgb(234, 195, 96);">
+
+      <h1 style="color: #f9f7f5;text-align: center;">Welcome to Ramkrishna maission ashram  </h1>
+      <p style="text-align: center;">A place of spiritual peace, harmony, and enlightenment</p>
+    </div>
+  </section>
+
+  <section id="about"></section>
+ 
+  <h2 class="section-title" style="text-align: center; margin-bottom: 20px;>
+    <h2 class="section-title">About ramkrishna mission ashram ,rajgir</h2>
+    <div class="about">
+      <div class="about-text" style="display: block; background-color:#dcba5c; border-radius: 10px;">
+     <div style="width: 100%; max-width: 800px; margin: 0 auto; padding: 10px;">
+  <img
+    src="https://i.postimg.cc/Jhv3QDpv/IMG-0363.avif"
+    alt="Belur Math image"
+
+    style="
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: block;
+    "
+  >
+ 
+</div>
+
+
+
+      
+
+      <div class="about-text" style="margin-bottom: 13px; padding: 10px; font-size: 1.1rem; line-height: 1.6; color: #333;">
+       
+        Ramakrishna Math, Rajgir, is a branch of the Ramakrishna Order founded by Swami Vivekananda, inspired by the teachings of Sri Ramakrishna. Located in the spiritually significant town of Rajgir, Bihar, the Math serves as a peaceful center for meditation, worship, and spiritual learning. It promotes harmony and selfless service through spiritual and humanitarian activities. The ashram also offers limited guest accommodation on a donation basis. Visitors are advised to contact in advance. Nearby attractions include Vishwa Shanti Stupa and ancient Buddhist sites. The Math reflects the ideals of Vedanta and works towards uplifting individuals through spiritual and moral education.
+      </div>
+    </div>
+  </section>
+
+  <section id="activities"
+  style="padding: 20px; background-color: #cba334; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+  <h2 class="section-title" style="text-align: center; margin-bottom: 20px;">Our Activities</h2>
+    <h2 class="section-title" style="color: chocolate;">Our Activities</h2>
+    <img src="https://www.bing.com/th/id/OIP.XN1mi6nb5CAxycMFPumvagHaD5?w=223&h=211&c=8&rs=1&qlt=70&r=0&o=7&cb=thws4&dpr=1.3&pid=3.1&rm=3" alt="" width="100%" style="border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+
+</div>
+    </div>
+  </section>
+
+<section id="Our Inspiration" style="padding: 20px; background-color: #cba334; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+  <h2 class="section-title" style="text-align: center; margin-bottom: 20px;">Our Inspiration</h2>
+  
+  <div class="features" style="display: flex; justify-content: center;">
+    
+    <div class="feature-item" style="background-color: rgb(194, 139, 72); padding: 20px; border-radius: 8px; text-align: center; max-width: 400px;">
+      <h4 style="margin-bottom: 15px;">
+        The holy lives which have enabled thousands of people to gain or regain faith in God and in the eternal verities of religion.
+      </h4>
+      
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+        <a href="https://biographies.rkmm.org/s/sb/m/holy-trio-and-direct-disciples/a/sri-ramakrishna" target="_blank" rel="noopener noreferrer">
+          <img src="https://live.staticflickr.com/65535/53677987068_8c8477e862_c_d.jpg" alt="thakur" style="width: 100%; max-width: 300px; height: auto; border-radius: 5px;">
+        </a>
+        
+        <a href="https://biographies.rkmm.org/s/sb/m/holy-trio-and-direct-disciples/a/sri-sarada-devi" target="_blank" rel="noopener noreferrer">
+          <img src="https://live.staticflickr.com/65535/53678220115_f6379a1d2a_c_d.jpg" alt="maa" style="width: 100%; max-width: 300px; height: auto; border-radius: 5px;">
+        </a>
+        
+        <a href="https://biographies.rkmm.org/s/sb/m/holy-trio-and-direct-disciples/a/swami-vivekananda" target="_blank" rel="noopener noreferrer">
+          <img src="https://live.staticflickr.com/65535/53677766551_6166cf2fa2_c_d.jpg" alt="swami ji" style="width: 100%; max-width: auto; height: auto; border-radius: 5px;">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="gallery" style="padding: 20px; background-color: #cba334; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+
+  <h2 class="section-title" style="text-align: center; margin-bottom: 20px;">Gallery</h2>
+      <img src="https://babulhotel.com/wp-content/uploads/2023/10/BELUR-MATH.jpg" alt="Inspiration Image" style="width: 100%; height: auto; border-radius: 8px; margin-left: 11px ;">
+
+      <img src="data:image/jpeg;base64,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" alt="Gallery 2" style="width: 100%; border-radius: 8px; margin: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcPlgSPCmTkGrr4tZSWzB6lJoRMHX32afL3Q&s" alt="Gallery 3" style="width:100%; border-radius: 8px; margin: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    </div>
+  <section id="Event">
+  
+    <h2 class="section-title">Event:- 2025-2026</h2>
+    <div class="about" style="flex-direction: row-reverse;">
+   
+  <img src="https://live.staticflickr.com/65535/54445018230_5aa957da02_h.jpg" alt="" 
+ 
+  style="
+  width: auto; 
+  height: auto; 
+  border-radius: 8px; 
+  margin: 10px auto; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+">
+  <p style="text-align: justify; margin: 10px;">
+    This box is fully responsive. It will look good on laptops, tablets, and mobiles.
+  </p>
+</div>
+
+        The Ramakrishna Mission Ashrama in Rajgir is renowned for its vibrant events and activities that foster spiritual growth and community engagement. Throughout the year, the ashrama hosts a variety of events including spiritual discourses, meditation sessions, cultural programs, and educational workshops. These events are designed to promote the teachings of Sri Ramakrishna, Swami Vivekananda, and the ideals of the Ramakrishna Order. The ashrama also celebrates important festivals such as Durga Puja, Kali Puja, and Swami Vivekananda's birthday with great enthusiasm, attracting devotees from all over. Additionally, the ashrama organizes health camps, blood donation drives, and social service activities to serve the local community. The events at the Ramakrishna Mission Ashrama in Rajgir provide a platform for individuals to connect with their spiritual selves while contributing positively to society.
+      </p>
+    </div>
+
+  <footer id="Contact" style="background-color: rgb(26, 5, 63); color:#efefef ;margin-top: 20px; margine: left 23px; padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);" >
+   
+    <p>Contact us: <a href="mailto:info@belurmath.org">info@belurmath.org</a> | Phone: +91 33 2654 3126</p>
+    <p>
+      <a href="https://www.facebook.com/ramakrishnaashramdarshan.rajgir/" target="_blank" rel="noreferrer">Facebook</a> 
+      <a href="https://twitter.com/belurmath" target="_blank" rel="noreferrer">Twitter</a> 
+      <a href="https://www.instagram.com/rkmbelurmath/?hl=en" target="_blank" rel="noreferrer">Instagram</a>
+    </p>
+  </footer>
+ 
+  <h2>Our Location</h2>
+  <div class="map-container" style="display: block; margin: 0 auto; width: 80%; max-width: 800px; height: 450px; border: 2px solid #020201; border-radius: 10px; overflow: hidden;">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.1234567890123!2d85.4212345!3d25.0178901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2f123456789ab%3A0xabcdef1234567890!2sRamakrishna%20Mission%20Ashrama%2C%20Rajgir!5e0!3m2!1sen!2sin!4v1623456789012!5m2!1sen!2sin"
+      width="100%"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      title="Ramakrishna Mission Ashram, Rajgir"
+      referrerpolicy="no-referrer-when-downgrade" ;></iframe>
+    </iframe>
+  </div>
+
+  
+
+  
+</div>
+
+</body>
+</html>
