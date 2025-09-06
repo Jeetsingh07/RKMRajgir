@@ -236,14 +236,17 @@
   <img src="https://live.staticflickr.com/65535/54445018230_5aa957da02_h.jpg" alt="" 
  
   style="
-  width: auto; 
-  height: auto; 
+width: 100vw;               /* Full width of the screen */
+  width: 90%;                  /* Responsive width (shrinks on mobile) */
+  max-width: 1200px;           /* Don’t grow too big on large screens */
+  height: auto;                /* Adjust height automatically */
+  object-fit: cover;           /* For images: keeps aspect ratio */
   border-radius: 8px; 
-  margin: 10px auto; 
+  margin: 10px auto;           /* Center horizontally */
   box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
   display: flex; 
   justify-content: center; 
-  align-items: center;
+  align-items: center; 
 ">
   <p style="text-align: justify; margin: 10px;">
     This box is fully responsive. It will look good on laptops, tablets, and mobiles.
@@ -284,4 +287,5 @@
 </div>
 
 </body>
+
 </html>
